@@ -20,6 +20,10 @@ dynamic = ["dependencies"]
 [project.optional-dependencies]
 dev = ["black==23.12.1", "flake8", "isort"]
 
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
 [tool.setuptools]
 packages = ["lightglue"]
 
