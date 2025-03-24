@@ -21,7 +21,7 @@ dynamic = ["dependencies"]
 dev = ["black==23.12.1", "flake8", "isort"]
 
 [build-system]
-requires = ["setuptools", "wheel"]
+requires = ["setuptools>=61", "wheel", "setuptools_scm"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools]
@@ -29,6 +29,9 @@ packages = ["lightglue"]
 
 [tool.setuptools.dynamic]
 dependencies = {file = ["requirements.txt"]}
+
+[tool.setuptools.packages.find]
+where = ["."]
 
 [tool.isort]
 profile = "black"
